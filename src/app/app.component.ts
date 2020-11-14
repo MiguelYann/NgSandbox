@@ -6,6 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title =
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, maxime sunt veritatis tempora soluta magni quod possimus? Deleniti quasi enim harum tenetur eaque dolor, perspiciatis tempore suscipit reprehenderit adipisci error?';
+
+  products = {
+    isFavorite: true
+  }
+
+  tweet = {
+   post: "New JS Framework",
+   isLike: false,
+   totalCountOfLike: 0
+  }
+
+  getFavorite(favorite: boolean) {
+    this.products.isFavorite = favorite;
+    console.log(this.products);
+  }
+
+  getDataTweet(dataTweet: any) {
+   this.tweet.isLike = dataTweet.likeState;
+   this.tweet.totalCountOfLike = dataTweet.count;
+  }
 }

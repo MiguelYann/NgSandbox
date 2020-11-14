@@ -1,3 +1,9 @@
-<h1>{{title | customPipe}}</h1>
-
-<app-star></app-star>
+<app-star
+  [is-favorite]="products.isFavorite"
+  (trigger-favorite)="getFavorite($event)"
+></app-star>
+<like
+  [is-like]="tweet.isLike"
+  [total-like]="tweet.totalCountOfLike"
+  (trigger)="getDataTweet($event)"
+></like>

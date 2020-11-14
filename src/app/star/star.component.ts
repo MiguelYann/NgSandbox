@@ -1,3 +1,4 @@
+import { EventEmitter, Input, Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./star.component.css'],
 })
 export class StarComponent implements OnInit {
-  isFavorite = false;
+ @Input('is-favorite') isFavorite = false;
+
+ @Output("trigger-favorite") trigger = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
 
   favorize() {
     this.isFavorite = !this.isFavorite;
-    console.log(this.isFavorite);
+    this.trigger.emit(this.isFavorite);
   }
 }

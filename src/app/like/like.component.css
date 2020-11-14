@@ -1,0 +1,10 @@
+.fa-heart {
+  color: rgba(0, 162, 255, 0.87)
+}
+.fa-heart-o{
+  color: rgba(0, 162, 255, 0.87)
+}
+
+.fa-heart-o:hover, .fa-heart:hover{
+  cursor: pointer;
+}
