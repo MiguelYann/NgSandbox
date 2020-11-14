@@ -1,11 +1,15 @@
+import { CustomPipe } from './custom.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { StarComponent } from './star/star.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomPipe,
+    StarComponent
   ],
   imports: [
     BrowserModule
