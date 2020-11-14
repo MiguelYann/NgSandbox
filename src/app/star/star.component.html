@@ -1,2 +1,7 @@
-
-<i (click)='favorize()' [class]=" 'fa fa-3x' + (isFavorite ? ' fa-star' : ' fa-star-o')" aria-hidden="true"></i>
+<i
+  (click)="favorize()"
+  class="fa fa-3x"
+  aria-hidden="true"
+  [class.fa-star]="isFavorite"
+  [class.fa-star-o]="!isFavorite"
+></i>
