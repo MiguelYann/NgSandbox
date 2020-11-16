@@ -1,9 +1,11 @@
-<i
-  class="fa fa-3x"
-  aria-hidden="true"
-  [class.fa-heart-o]="!isLiked"
-  [class.fa-heart]="isLiked"
-  (click)="likePost()"
->
-</i>
-<span>{{totalLike}}</span>
+<div *ngIf="isLiked; then liked else unLiked"></div>
+
+<ng-template #unLiked>
+  <i class="fa fa-heart-o fa-3x" aria-hidden="true" (click)="likePost()"> </i>
+</ng-template>
+
+<ng-template #liked>
+  <i class="fa fa-heart fa-3x" aria-hidden="true" (click)="likePost()"> </i>
+</ng-template>
+
+<span>{{ totalLike }}</span>
