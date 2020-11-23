@@ -1,4 +1,3 @@
-import { CustomPipe } from './custom.pipe';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,7 +11,6 @@ import { InputFormatDirective } from './directives/input-format.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    CustomPipe,
     StarComponent,
     LikeComponent,
     GuestListComponent,
