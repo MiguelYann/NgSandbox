@@ -1,0 +1,7 @@
+<table>
+  <tr *ngFor="let guest of guestList; trackBy: trackGuestById">
+    <app-guest [current-guest]="guest"></app-guest>
+  </tr>
+</table>
+
+<button (click)='changeStatus()'>Change statut</button>

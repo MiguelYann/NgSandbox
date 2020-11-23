@@ -1,0 +1,13 @@
+<div>
+  <h2>{{guest.name}}</h2>
+  <span *ngIf="guest.online; then online else offline "></span>
+
+  <ng-template #online>
+    <span>Online</span>
+  </ng-template>
+
+  <ng-template #offline>
+    <span>Offline</span>
+  </ng-template>
+  
+</div>
