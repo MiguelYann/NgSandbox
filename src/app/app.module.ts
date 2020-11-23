@@ -7,7 +7,7 @@ import { StarComponent } from './star/star.component';
 import { LikeComponent } from './like/like.component';
 import { GuestListComponent } from './guest-list/guest-list.component';
 import { GuestComponent } from './guest/guest.component';
-import { InputFormatDirective } from './input-format.directive';
+import { InputFormatDirective } from './directives/input-format.directive';
 
 @NgModule({
   declarations: [
