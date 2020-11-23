@@ -1,0 +1,33 @@
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <div class="mb-0">
+        <div
+          class="btn btn-link"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
+          (click)='toggleCollapse()'
+        >
+          {{titleHeader}}
+        </div>
+      </div>
+    </div>
+    <div
+    id="collapseOne"
+    class="collapse "
+    [ngClass]="{
+      'show': isOpened
+    }"
+    aria-labelledby="headingOne"
+    data-parent="#accordionExample"
+  >
+    <div class="card-body">
+      <ng-content select=".title-content">
+      </ng-content>
+    </div>
+  </div>
+  </div>
+</div>

@@ -7,6 +7,7 @@ import { LikeComponent } from './like/like.component';
 import { GuestListComponent } from './guest-list/guest-list.component';
 import { GuestComponent } from './guest/guest.component';
 import { InputFormatDirective } from './directives/input-format.directive';
+import { CollapseContentComponent } from './collapse-content/collapse-content.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { InputFormatDirective } from './directives/input-format.directive';
     LikeComponent,
     GuestListComponent,
     GuestComponent,
-    InputFormatDirective
+    InputFormatDirective,
+    CollapseContentComponent
   ],
   imports: [
     BrowserModule
