@@ -8,6 +8,8 @@ import { GuestListComponent } from './guest-list/guest-list.component';
 import { GuestComponent } from './guest/guest.component';
 import { InputFormatDirective } from './directives/input-format.directive';
 import { CollapseContentComponent } from './collapse-content/collapse-content.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { CollapseContentComponent } from './collapse-content/collapse-content.co
     GuestListComponent,
     GuestComponent,
     InputFormatDirective,
-    CollapseContentComponent
+    CollapseContentComponent,
+    ContactFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
