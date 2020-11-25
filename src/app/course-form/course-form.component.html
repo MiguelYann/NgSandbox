@@ -42,7 +42,7 @@
       name="category"
       id="my-category"
     >
-      <option *ngFor="let category of categories" [value]="category.id">
+      <option *ngFor="let category of categories" [ngValue]="category">
         {{ category.name }}
       </option>
     </select>
