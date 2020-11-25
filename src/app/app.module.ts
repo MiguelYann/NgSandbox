@@ -10,6 +10,7 @@ import { InputFormatDirective } from './directives/input-format.directive';
 import { CollapseContentComponent } from './collapse-content/collapse-content.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule } from '@angular/forms';
+import { CourseFormComponent } from './course-form/course-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     GuestComponent,
     InputFormatDirective,
     CollapseContentComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    CourseFormComponent
   ],
   imports: [
     BrowserModule,
