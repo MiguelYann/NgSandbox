@@ -1,3 +1,4 @@
+import { UsernameValidators } from './../commons/validators/username.validators';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
@@ -11,6 +12,7 @@ export class SignupComponent implements OnInit {
     username: new FormControl('', [
       Validators.required,
       Validators.minLength(4),
+      UsernameValidators.canContainsWhiteSpace
     ]),
     password: new FormControl('', [
       Validators.required,
