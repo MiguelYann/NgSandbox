@@ -1,25 +1,64 @@
-<form>
-  <div class="form-group">
-    <label for="firstName">Name</label>
-    <input
-      required
-      minlength="4"
-      pattern="echo"
-      ngModel
-      name="firstName"
-      id="firstName"
-      type="text"
-      class="form-control"
-      #firstName="ngModel"
-      (change)="log(firstName)"
-    />
-    <div *ngIf="firstName.touched && !firstName.valid" class="alert alert-danger">
-      <div *ngIf="firstName.errors">Nom requis</div>
-      <div *ngIf="firstName.errors?.minlength">Nom doit avoir minimum {{firstName.errors?.minlength.requiredLength}} caracteres</div>
-      <div *ngIf="firstName.errors?.pattern">Nom doit respecter le pattern  {{firstName.errors?.pattern.requiredPattern}}</div>
+<form ngForm #form="ngForm" (ngSubmit)="send(form)">
+  <div ngModelGroup="contc">
+    <!-- TEXT -->
+    <div class="form-group">
+      <label for="firstName">Name</label>
+      <input
+        required
+        minlength="4"
+        ngModel
+        name="firstName"
+        id="firstName"
+        type="text"
+        class="form-control"
+        #firstName="ngModel"
+        (change)="log(firstName)"
+      />
+      <div
+        *ngIf="firstName.touched && !firstName.valid"
+        class="alert alert-danger"
+      >
+        <div *ngIf="firstName.errors">Nom requis</div>
+        <div *ngIf="firstName.errors?.minlength">
+          Nom doit avoir minimum
+          {{ firstName.errors?.minlength.requiredLength }} caracteres
+        </div>
+      </div>
     </div>
   </div>
-  
+
+  <!-- SELECT -->
+  <div class="form-group">
+    <label for="contactMethod">Contact methode</label
+    ><select
+      ngModel
+      name="contactMethode"
+      id="contactMethod"
+      class="form-control"
+    >
+      <option *ngFor="let fakeOption of fakeOptions" [ngValue]="fakeOption">
+        {{ fakeOption.option }}
+      </option>
+    </select>
+  </div>
+
+  <!-- RADIO -->
+
+  <div class="radio">
+    <label for="email">
+      <input name="phone" type="radio" value="1" />
+    Email
+    </label>
+  </div>
+
+  <div class="radio">
+    <label for="">
+      <input name="phone" type="radio" value="2" />
+    Telephone
+    </label>
+  </div>
+
+  <!-- TEXTAREA -->
 
   <div class="form-group">
     <label for="comment">Comments</label
