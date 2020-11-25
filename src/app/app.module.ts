@@ -9,8 +9,9 @@ import { GuestComponent } from './guest/guest.component';
 import { InputFormatDirective } from './directives/input-format.directive';
 import { CollapseContentComponent } from './collapse-content/collapse-content.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CourseFormComponent } from './course-form/course-form.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +23,13 @@ import { CourseFormComponent } from './course-form/course-form.component';
     InputFormatDirective,
     CollapseContentComponent,
     ContactFormComponent,
-    CourseFormComponent
+    CourseFormComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
