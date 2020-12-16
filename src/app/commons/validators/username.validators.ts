@@ -1,16 +1,19 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
-
 export class UsernameValidators {
-  static canContainsWhiteSpace(
+  static shouldBeUnique(
     control: AbstractControl
-  ): ValidationErrors | null {
-    const valueOfControl: string = control.value;
-    const limitOfInputUserName = -1;
-    if (valueOfControl.indexOf(' ') != limitOfInputUserName) {
-      return {
-        requiredNoWhiteSpace: "Votre entree ne doit pas avoir d'espace",
-      };
-    }
-    return null;
+  ): Promise<ValidationErrors | null> {
+    return new Promise<ValidationErrors | null>((resolve, reject) => {
+      setTimeout(() => {
+        if (control.value === 'Miguel') {
+          resolve({ shouldUnique: true });
+          console.log("Error")
+        } else {
+          resolve(null);
+          console.log("Good")
+
+        }
+      }, 3000);
+    });
   }
 }

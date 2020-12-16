@@ -11,7 +11,11 @@ import { CollapseContentComponent } from './collapse-content/collapse-content.co
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CourseFormComponent } from './course-form/course-form.component';
-import { SignupComponent } from './signup/signup.component';
+// import { SignupComponent } from './signup/signup.component';
+import { FormPractiseComponent } from './form-practise/form-practise.component';
+import { FormPractiseReactiveComponent } from './form-practise-reactive/form-practise-reactive.component';
+import { NewCourseComponent } from './new-course/new-course.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { SignupComponent } from './signup/signup.component';
     CollapseContentComponent,
     ContactFormComponent,
     CourseFormComponent,
-    SignupComponent
+    // SignupComponent,
+    FormPractiseComponent,
+    FormPractiseReactiveComponent,
+    NewCourseComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,48 @@
+<div class="form">
+  <form [formGroup]="form" (ngSubmit)='login()'>
+
+    <div class="form-group" formGroupName="account">
+      <label for="town">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        name="email"
+        id="town"
+        aria-describedby="helpId"
+        placeholder=""
+        formControlName="email"
+      />
+  <div *ngIf="email?.pending && email?.touched" class="spinner-border text-primary" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+
+  <p>{{email?.pending}}</p>
+      <div
+        *ngIf="email?.errors?.shouldUnique"
+        class="alert alert-danger"
+        role="alert"
+      >
+        <strong> Doit etre unique</strong>
+      </div>
+
+      <label for="address">Town</label>
+      <input
+        type="text"
+        class="form-control"
+        name=""
+        id="address"
+        aria-describedby="helpId"
+        placeholder=""
+        formControlName="town"
+      />
+    </div>
+
+  <div *ngIf="form?.errors" class="alert alert-danger">
+    Incorrect
+    <div *ngIf="form?.errors?.incorrectPassword" class="alert alert-danger">
+      Mot de passe incorrecte
+    </div>
+  </div>
+    <button type="submit" class="btn btn-outline-primary">Login</button>
+  </form>
+</div>

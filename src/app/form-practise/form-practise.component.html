@@ -1,0 +1,30 @@
+<div class="form-group">
+  <form>
+    <label for="username">Username</label>
+    <input
+      minlength="4"
+      #usernameInput="ngModel"
+      ngModel
+      id="username"
+      class="form-control"
+      type="text"
+      name="username"
+      (ngModelChange)='username = ($event)'
+    />
+    <div *ngIf="usernameInput.pristine && usernameInput.touched" class="alert alert-danger" role="alert">
+      <strong>danger</strong>
+    </div>
+    <p>{{ username }}</p>
+    <label for="password">Password</label>
+    <input
+      #passwordInput="ngModel"
+      ngModel
+      id="password"
+      class="form-control"
+      type="password"
+      name="password"
+      [(ngModel)]="password"
+    />
+    <p>{{ password }}</p>
+  </form>
+</div>
