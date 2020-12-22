@@ -1,5 +1,8 @@
+import { AppErrorHandler } from './commons/errors/app-error-handler';
+import { ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { StarComponent } from './star/star.component';
@@ -16,6 +19,7 @@ import { FormPractiseComponent } from './form-practise/form-practise.component';
 import { FormPractiseReactiveComponent } from './form-practise-reactive/form-practise-reactive.component';
 import { NewCourseComponent } from './new-course/new-course.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -32,14 +36,11 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     FormPractiseComponent,
     FormPractiseReactiveComponent,
     NewCourseComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    PostComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  providers: [HttpClient, { provide: ErrorHandler, useClass: AppErrorHandler }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
