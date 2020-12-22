@@ -1,0 +1,20 @@
+<div class="form-group">
+  <label for="post">Ajouter un post</label>
+  <input
+    #inputPost
+    type="text"
+    class="form-control"
+    name="post"
+    id="post"
+    aria-describedby="helpId"
+    placeholder=""
+    (keyup.enter)='addPost(inputPost)'
+  />
+</div>
+
+<ul class="list-group">
+  <li *ngFor="let post of posts" class="list-group-item">
+    <button class="btn btn-default btn-sm" (click)='delete(post)'>DELETE</button>
+    {{ post?.title }}
+  </li>
+</ul>
