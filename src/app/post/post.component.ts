@@ -2,7 +2,7 @@ import { BadRequestError } from './../commons/errors/bad-request-error';
 import { BadRequestInputError } from './../commons/errors/bad-request-input-error';
 import { NotFoundError } from './../commons/errors/not-found-errors';
 import { AppError } from './../commons/errors/app-errors';
-import { PostService } from './../../../services/post.service';
+import { PostService } from '../services/post.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

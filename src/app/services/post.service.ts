@@ -1,6 +1,6 @@
-import { BadRequestInputError } from './../src/app/commons/errors/bad-request-input-error';
-import { NotFoundError } from './../src/app/commons/errors/not-found-errors';
-import { AppError } from './../src/app/commons/errors/app-errors';
+import { BadRequestInputError } from '../commons/errors/bad-request-input-error';
+import { NotFoundError } from '../commons/errors/not-found-errors';
+import { AppError } from '../commons/errors/app-errors';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/catch';
